@@ -7,31 +7,33 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-Recipe.create!(
-  name: "Noodle",
-  description: "soft",
-  image_url: "",
-  rating: 4.3
-)
-
-Recipe.create!(
-  name: "Salad",
-  description: "nice",
-  image_url: "",
+Recipe.create(
+  name: "Spaghetti Carbonara",
+  description: "A true Italian Carbonara recipe, it's ready in about 30 minutes. There is no cream....",
+  image_url: "https://example.com/spaghetti.jpg",
   rating: 4.5
 )
 
-Recipe.create!(
-  name: "Rice",
-  description: "Hot",
-  image_url: "",
-  rating: 4.6
+Recipe.create(
+  name: "Avocado Toast",
+  description: "Quick, easy, and nutritious breakfast toast with smashed avocado and a sprinkle of chili.",
+  image_url: "https://example.com/avocado_toast.jpg",
+  rating: 4.0
 )
-Recipe.create!(
-  name: "Steak",
-  description: "Juicy",
-  image_url: "",
-  rating: 4.9
+
+Recipe.create(
+  name: "Pancakes",
+  description: "Fluffy pancakes perfect for a Sunday brunch.",
+  image_url: "https://example.com/pancakes.jpg",
+  rating: 4.8
 )
+
+Recipe.create(
+  name: "Caprese Salad",
+  description: "A fresh and simple Italian salad with mozzarella, tomatoes, and basil.",
+  image_url: "https://example.com/caprese.jpg",
+  rating: 4.2
+)
+
 
 puts "#{Recipe.count} recipes careated!"

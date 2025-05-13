@@ -9,4 +9,19 @@
   <% end %>
 </ul>
 
-<%= link_to "Back to all categories", categories_path %>
+
+
+<h2>Recipes in this Category:</h2>
+<ul>
+  <% @category.bookmarks.each do |bookmark| %>
+    <li>
+      <strong><%= bookmark.recipe.name %></strong> |
+      <%= bookmark.comment %> |
+      <%= link_to "Delete", category_bookmark_path(@category, bookmark), method: :delete, data: { confirm: "Are you sure?" } %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a Recipe", new_category_bookmark_path(@category) %>
+<br>
+<%= link_to "Back to All Categories", categories_path %>
