@@ -2,6 +2,5 @@ class Category < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
   has_many :recipes, through: :bookmarks
 
-  validates :name, uniquenses: true
-
+  validates :name, uniqueness: true
 end

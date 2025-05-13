@@ -1,0 +1,12 @@
+<h1><%= @category.name %></h1>
+
+<h2>Bookmarks in this Category:</h2>
+<ul>
+  <% @category.bookmarks.each do |bookmark| %>
+    <li>
+      <strong><%= bookmark.recipe.name %>:</strong> <%= bookmark.comment %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Back to all categories", categories_path %>
